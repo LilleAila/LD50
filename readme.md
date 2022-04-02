@@ -9,7 +9,7 @@ To build the dam you need trees and to get them, you build up speed and roll int
 The player pushes the trees to the dam to make it larger.
 
 This is a combination of:
-* Delay the inevitable
-* One tool may purposes
-* Single resource
-* Momentum
+* Delay the inevitable - The flood
+* One tool may purposes - You are tool
+* Single resource - Wood
+* Momentum - Build up speed
