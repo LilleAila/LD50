@@ -14411,6 +14411,8 @@ MonoBehaviour:
   - {fileID: 1807488847}
   - {fileID: 1821095887}
   logs: 0
+  startTime: 25
+  floodSpeed: 18
 --- !u!1 &1716577504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 874580503182740708, guid: 93533c4488115cb4dae67380248c0675, type: 3}
@@ -18186,7 +18188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 998484887224388666, guid: 035d1a841cbd2d144bb0840aa8a8941d, type: 3}
       propertyPath: m_Name
-      value: Log_3
+      value: Log_Long
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035d1a841cbd2d144bb0840aa8a8941d, type: 3}
@@ -18260,7 +18262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4093491668188069171, guid: 26df1654c8fc3ec49b22b7f887e7dc2e, type: 3}
       propertyPath: m_Name
-      value: Log_1
+      value: Log_Short
       objectReference: {fileID: 0}
     - target: {fileID: 4093491668188069183, guid: 26df1654c8fc3ec49b22b7f887e7dc2e, type: 3}
       propertyPath: m_RootOrder
@@ -18378,7 +18380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7424367979754191908, guid: 90c73c769e7b5874495a451fcaa5119e, type: 3}
       propertyPath: m_Name
-      value: Log_2
+      value: Log_Medium
       objectReference: {fileID: 0}
     - target: {fileID: 7424367979754191912, guid: 90c73c769e7b5874495a451fcaa5119e, type: 3}
       propertyPath: m_RootOrder
