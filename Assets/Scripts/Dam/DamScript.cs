@@ -8,7 +8,7 @@ public class DamScript : MonoBehaviour
     public int logs = 1;
     [SerializeField] float startTime = 25f;
     [SerializeField] float floodSpeed = 17f;
-
+    
     [Header ("Game Over")]
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] GameObject[] tileMaps;
@@ -46,8 +46,8 @@ public class DamScript : MonoBehaviour
         for (int i = 0; i < stages.Length; i++) stages[i].SetActive(false);
         stages[currentStage].SetActive(true);
     }
-
-    void GameOver()
+    
+    void GameOver() 
     {
         gameOverPanel.SetActive(true);
         for (int i = 0; i < tileMaps.Length; i++)
