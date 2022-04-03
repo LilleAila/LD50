@@ -21,16 +21,28 @@ public class TreeSpawner : MonoBehaviour
     [SerializeField] Vector2 min;
     [SerializeField] Vector2 max;
 
-    void Start()
+    void Awake()
     {
+        SpawnTrees();
+    }
 
+    private void Update()
+    {
+        float treeCount;
+        treeCount = treeParent.GetComponentsInChildren<Transform>().Length - 1; // -1 because GetComponentsInChildren includes the parent
+
+        if (treeCount <= 0) SpawnTrees();
+    }
+
+    void SpawnTrees()
+    {
         for (int i = rows * rowDistance; i > min.y; i -= rowDistance)
         {
             float x = min.x;
             for (int j = 0; j < Random.Range(minTreesPerRow, maxTreesPerRow); j++)
             {
                 x += Random.Range(minTreeDistance, maxTreeDistance);
-                Vector2 spawnPos = new Vector2(x, Random.Range(i-1,i+1));
+                Vector2 spawnPos = new Vector2(x, Random.Range(i - 1, i + 1));
                 TreeScript randomTree = treePrefabs[Random.Range(0, treePrefabs.Length)];
 
                 TreeScript theTree = Instantiate(randomTree, spawnPos, randomTree.transform.rotation);
