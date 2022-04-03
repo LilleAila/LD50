@@ -9,11 +9,6 @@ public class DamScript : MonoBehaviour
     [SerializeField] float startTime = 25f;
     [SerializeField] float floodSpeed = 17f;
 
-    private void Update()
-    {
-        Debug.Log(logs);
-    }
-
     private void Start()
     {
         ShowDam();
