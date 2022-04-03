@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class StartPanelButton : MonoBehaviour
 {
     [SerializeField] GameObject startPanel;
+    [SerializeField] GameObject dam;
+    [SerializeField] GameObject woodAmount;
+    [SerializeField] GameObject timer;
+    [SerializeField] BallController player;
 
     void Start()
     {
@@ -14,6 +18,11 @@ public class StartPanelButton : MonoBehaviour
 
     void StartButton()
     {
+        dam.SetActive(true);
+        woodAmount.SetActive(true);
+        timer.SetActive(true);
+        player.enabled = true;
+
         Destroy(startPanel);
     }
 }
