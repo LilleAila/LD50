@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SpawnTrees : MonoBehaviour
 {
-    [SerializeField] TreeScript[] TreePrefabs;
+    [SerializeField] GameObject[] TreePrefabs;
 
     [Header("Spawner Options")]
+    [SerializeField, Range(1, 10)] int MinTreesPerRow = 1;
     [SerializeField, Range(1, 10)] int MaxTreesPerRow = 5;
     [SerializeField, Range(1, 25)] int Rows = 5;
     [SerializeField, Range(1, 50)] int RowDistance = 10;
@@ -17,20 +18,34 @@ public class SpawnTrees : MonoBehaviour
     [SerializeField] Vector2 Min;
     [SerializeField] Vector2 Max;
 
-    private void Start()
+    [HideInInspector] public int treeCount = 0;
+
+    private void Awake()
     {
-        for (int i = Rows * RowDistance; i > Min.y; i-= RowDistance)
+        Spawn();
+    }
+
+    private void Update()
+    {
+        if (treeCount == 0) Spawn();
+    }
+
+    void Spawn()
+    {
+        for (int i = Rows * RowDistance; i > Min.y; i -= RowDistance)
         {
             float x = Min.x;
-            for(int j = 0; j < Random.Range(0, MaxTreesPerRow); j++)
+            for (int j = 0; j < Random.Range(MinTreesPerRow, MaxTreesPerRow); j++)
             {
                 x += Random.Range(MinDistance, MaxDistance);
-                Vector2 SpawnPos = new Vector2(x, Random.Range(i - RowDistance / 2, i + RowDistance / 2));
+                Vector2 SpawnPos = new Vector2(x, Random.Range(i - 1, i + 1));
 
-                TreeScript TreePrefab = TreePrefabs[Random.Range(0, TreePrefabs.Length)];
+                GameObject TreePrefab = TreePrefabs[Random.Range(0, TreePrefabs.Length)];
 
-                TreeScript theTree = Instantiate(TreePrefab, SpawnPos, TreePrefab.transform.rotation);
+                GameObject theTree = Instantiate(TreePrefab, SpawnPos, TreePrefab.transform.rotation);
                 theTree.transform.SetParent(transform);
+
+                treeCount++;
             }
         }
     }
