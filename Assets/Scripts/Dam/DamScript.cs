@@ -46,9 +46,9 @@ public class DamScript : MonoBehaviour
         for (int i = 0; i < stages.Length; i++) stages[i].SetActive(false);
         stages[currentStage].SetActive(true);
     }
-
+    
     void GameOver() 
-    { 
+    {
         gameOverPanel.SetActive(true);
         for (int i = 0; i < tileMaps.Length; i++)
         {
