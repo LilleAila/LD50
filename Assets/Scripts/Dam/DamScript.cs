@@ -8,8 +8,8 @@ public class DamScript : MonoBehaviour
     public int logs = 0;
     [SerializeField] float startTime = 25f;
     [SerializeField] float floodSpeed = 17f;
-
-    [Header("Game Over")]
+    
+    [Header ("Game Over")]
     [SerializeField] GameObject gameOverPanel;
     [SerializeField] GameObject[] tileMaps;
     [SerializeField] GameObject fakeWaterTileMap;
@@ -55,8 +55,9 @@ public class DamScript : MonoBehaviour
             else stages[i].SetActive(false);
         }
     }
-
-    void GameOver() {
+    
+    void GameOver() 
+    {
         gameOverPanel.SetActive(true);
         for (int i = 0; i < tileMaps.Length; i++)
         {
@@ -66,7 +67,6 @@ public class DamScript : MonoBehaviour
         Destroy(treeSpawner);
         Destroy(treeParent);
         player.enabled = false;
-
         Destroy(gameObject);
     }
 
