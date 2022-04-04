@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game3.1.unity
     guid: b718ee87d5fc69d4786cead3d5076031
+  - enabled: 1
+    path: Assets/Scenes/Flood.unity
+    guid: 92c3b7bd6c707c94d8763c5515ad16df
   m_configObjects: {}
