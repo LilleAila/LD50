@@ -42,7 +42,7 @@ public class TreeSpawner : MonoBehaviour
             for (int j = 0; j < Random.Range(minTreesPerRow, maxTreesPerRow); j++)
             {
                 x += Random.Range(minTreeDistance, maxTreeDistance);
-                Vector2 spawnPos = new Vector2(x, Random.Range(i - 1, i + 1));
+                Vector2 spawnPos = new Vector2(x, Random.Range(i - 0.5f, i + 0.5f));
                 TreeScript randomTree = treePrefabs[Random.Range(0, treePrefabs.Length)];
 
                 TreeScript theTree = Instantiate(randomTree, spawnPos, randomTree.transform.rotation);
