@@ -14,6 +14,7 @@ public class ScriptTrees : MonoBehaviour
 
             if (player.moveTime == player.howLongToMoveToKillTree)
             {
+                player.moveTime = 0;
                 Instantiate(logPrefabs[Random.Range(0, logPrefabs.Length)], transform.position, transform.rotation);
                 GameObject.Find("Trees").GetComponent<SpawnTrees>().treeCount--;
                 Destroy(gameObject);
