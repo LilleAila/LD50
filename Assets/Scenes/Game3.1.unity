@@ -662,6 +662,7 @@ MonoBehaviour:
   logs: 0
   startTime: 30
   floodSpeed: 30
+  timer: {fileID: 856009238}
 --- !u!60 &526687143
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1543,6 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73c30c9372a5b4499e61c24c74c1f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
 --- !u!1 &914402275
 GameObject:
   m_ObjectHideFlags: 0

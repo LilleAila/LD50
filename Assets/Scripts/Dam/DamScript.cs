@@ -10,6 +10,9 @@ public class DamScript : MonoBehaviour
     [SerializeField] float startTime = 25f;
     [SerializeField] float floodSpeed = 17f;
 
+    [Header("Playerprefs")]
+    [SerializeField] Timer timer;
+
     private void Start()
     {
         ShowDam();
@@ -44,6 +47,13 @@ public class DamScript : MonoBehaviour
     void GameOver() 
     {
         SceneManager.LoadScene("Flood");
+
+        DamScript dam = GetComponent<DamScript>();
+
+        PlayerPrefs.SetFloat("WoodAmount", dam.logs);
+        PlayerPrefs.SetFloat("Time", timer.time);
+
+        PlayerPrefs.Save();
     }
 
     void Flood()
