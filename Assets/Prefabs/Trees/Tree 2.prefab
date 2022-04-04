@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logPrefabs:
   - {fileID: 7424367979754191908, guid: 90c73c769e7b5874495a451fcaa5119e, type: 3}
-  - {fileID: 998484887224388666, guid: 035d1a841cbd2d144bb0840aa8a8941d, type: 3}
+  - {fileID: 4093491668188069171, guid: 26df1654c8fc3ec49b22b7f887e7dc2e, type: 3}
 --- !u!60 &7590742723484021321
 PolygonCollider2D:
   m_ObjectHideFlags: 0
