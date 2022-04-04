@@ -15,7 +15,7 @@ public class GameoverPanel : MonoBehaviour
         float minutes = Mathf.Floor(time / 60);
         float seconds = time - minutes * 60;
 
-        text.text = "You got a total of " + woodAmount + " wood \n and survived for " + minutes + " minutes and " + seconds + " seconds!";
+        text.text = "You got a total of " + woodAmount + " wood \n and survived for " + minutes + " minutes and " + Mathf.FloorToInt(seconds) + " seconds!";
     }
 
 

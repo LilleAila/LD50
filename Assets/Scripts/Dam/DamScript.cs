@@ -7,6 +7,7 @@ public class DamScript : MonoBehaviour
 {
     [SerializeField] GameObject[] stages = new GameObject[5];
     public int logs = 0;
+    int totalLogs = 0;
     [SerializeField] float startTime = 25f;
     [SerializeField] float floodSpeed = 17f;
 
@@ -25,6 +26,7 @@ public class DamScript : MonoBehaviour
         {
             if (logs >= 20) return;
             logs++;
+            totalLogs++;
             ShowDam();
             Destroy(collision.gameObject);
         }
@@ -48,9 +50,7 @@ public class DamScript : MonoBehaviour
     {
         SceneManager.LoadScene("Flood");
 
-        DamScript dam = GetComponent<DamScript>();
-
-        PlayerPrefs.SetFloat("WoodAmount", dam.logs);
+        PlayerPrefs.SetFloat("WoodAmount", totalLogs);
         PlayerPrefs.SetFloat("Time", timer.time);
 
         PlayerPrefs.Save();
