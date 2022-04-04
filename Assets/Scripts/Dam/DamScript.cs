@@ -51,7 +51,12 @@ public class DamScript : MonoBehaviour
         SceneManager.LoadScene("Flood");
 
         PlayerPrefs.SetFloat("WoodAmount", totalLogs);
+        PlayerPrefs.SetFloat("DamSize", logs);
         PlayerPrefs.SetFloat("Time", timer.time);
+
+        if (totalLogs > PlayerPrefs.GetFloat("BestWoodAmount", 0)) PlayerPrefs.SetFloat("BestWoodAmount", totalLogs);
+        if (logs > PlayerPrefs.GetFloat("BestDamSize", 0)) PlayerPrefs.SetFloat("BestDamSize", logs);
+        if (timer.time > PlayerPrefs.GetFloat("BestTime", 0)) PlayerPrefs.SetFloat("BestTime", timer.time);
 
         PlayerPrefs.Save();
     }
