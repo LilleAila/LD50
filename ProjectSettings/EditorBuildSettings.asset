@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 34e465b786e6c17429c5f53cc98f019e
-  - enabled: 1
-    path: Assets/Scenes/Flood.unity
-    guid: 7c439ce8bec35b0448c538dbd5afd4cd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Game3.unity
     guid: f133fff4a6eaae441b2942d8b285a56b

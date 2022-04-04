@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7654935910144424796}
   - component: {fileID: -7046067002272376286}
   m_Layer: 0
-  m_Name: Tree_3
+  m_Name: Tree_5
   m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2745093817706419184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 72632651e7fc63a48b4caede762166a4, type: 3}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: 21300000, guid: 302532b9699abdf4baefd59377841ae3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logPrefabs:
-  - {fileID: 998484887224388666, guid: 035d1a841cbd2d144bb0840aa8a8941d, type: 3}
   - {fileID: 7424367979754191908, guid: 90c73c769e7b5874495a451fcaa5119e, type: 3}
+  - {fileID: 4093491668188069171, guid: 26df1654c8fc3ec49b22b7f887e7dc2e, type: 3}
 --- !u!60 &-7046067002272376286
 PolygonCollider2D:
   m_ObjectHideFlags: 0
