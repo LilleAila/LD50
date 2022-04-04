@@ -70856,7 +70856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1134525399
 Transform:
   m_ObjectHideFlags: 0
@@ -70885,6 +70885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treePrefabs:
   - {fileID: -7654935910144424796, guid: cbb1065b1840ab54aafdb808b71cbdeb, type: 3}
+  - {fileID: -7654935910144424796, guid: f352847e0452efc4ab6f73475770b308, type: 3}
   rows: 4
   minTreesPerRow: 1
   maxTreesPerRow: 4
@@ -73207,7 +73208,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1206345770}
-  - component: {fileID: 1206345771}
   m_Layer: 0
   m_Name: Trees
   m_TagString: Untagged
@@ -73229,30 +73229,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1206345771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206345769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96935f8a9f9d22149831afd3a5ce5ab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TreePrefabs:
-  - {fileID: 7668791854917226673, guid: 70758ee5a54848a49ad9160ad0540f47, type: 3}
-  - {fileID: 7668791854917226673, guid: 52a9695090048b448acaf94eba4c1f96, type: 3}
-  MinTreesPerRow: 1
-  MaxTreesPerRow: 3
-  Rows: 4
-  RowDistance: 3
-  MinDistance: 7
-  MaxDistance: 13
-  Min: {x: -24.25, y: -11.11}
-  Max: {x: 24.25, y: 12.66}
-  treeCount: 0
 --- !u!1 &1284244826
 GameObject:
   m_ObjectHideFlags: 0

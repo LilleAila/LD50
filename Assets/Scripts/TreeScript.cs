@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TreeScript : MonoBehaviour
 {
-    [SerializeField] GameObject logPrefab;
+    [SerializeField] GameObject[] logPrefabs;
 
     // Unity requires update for some reason
     void Update()
@@ -21,7 +21,7 @@ public class TreeScript : MonoBehaviour
             if (player.moveTime == player.howLongToMoveToKillTree)
             {
                 player.moveTime = 0;
-                Instantiate(logPrefab, transform.position, transform.rotation);
+                Instantiate(logPrefabs[Random.Range(0, logPrefabs.Length)], transform.position, transform.rotation);
                 Destroy(gameObject);
             }
         }
