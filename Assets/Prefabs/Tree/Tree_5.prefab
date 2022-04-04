@@ -99,6 +99,11 @@ MonoBehaviour:
   logPrefabs:
   - {fileID: 7424367979754191908, guid: 90c73c769e7b5874495a451fcaa5119e, type: 3}
   - {fileID: 4093491668188069171, guid: 26df1654c8fc3ec49b22b7f887e7dc2e, type: 3}
+  logDieSFX:
+  - {fileID: 8300000, guid: 4724ef28ca518db4d8c24fc87f9c3601, type: 3}
+  - {fileID: 8300000, guid: dd3fe759fe128aa48b18f5f5064e6fa2, type: 3}
+  - {fileID: 8300000, guid: 826c204cce5733447b1130c7bf7c05b8, type: 3}
+  - {fileID: 8300000, guid: ae0bc22b6caec324aa8316b940445239, type: 3}
 --- !u!60 &-7046067002272376286
 PolygonCollider2D:
   m_ObjectHideFlags: 0

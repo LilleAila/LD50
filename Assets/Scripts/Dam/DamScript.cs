@@ -11,6 +11,8 @@ public class DamScript : MonoBehaviour
     [SerializeField] float startTime = 25f;
     [SerializeField] float floodSpeed = 17f;
 
+    [SerializeField] AudioClip[] logPutInSFX;
+
     [Header("Playerprefs")]
     [SerializeField] Timer timer;
 
@@ -25,6 +27,7 @@ public class DamScript : MonoBehaviour
         if(collision.tag == "Log")
         {
             if (logs >= 20) return;
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(logPutInSFX[Random.Range(0, logPutInSFX.Length)]);
             logs++;
             totalLogs++;
             ShowDam();
@@ -51,11 +54,9 @@ public class DamScript : MonoBehaviour
         SceneManager.LoadScene("Flood");
 
         PlayerPrefs.SetFloat("WoodAmount", totalLogs);
-        PlayerPrefs.SetFloat("DamSize", logs);
         PlayerPrefs.SetFloat("Time", timer.time);
 
         if (totalLogs > PlayerPrefs.GetFloat("BestWoodAmount", 0)) PlayerPrefs.SetFloat("BestWoodAmount", totalLogs);
-        if (logs > PlayerPrefs.GetFloat("BestDamSize", 0)) PlayerPrefs.SetFloat("BestDamSize", logs);
         if (timer.time > PlayerPrefs.GetFloat("BestTime", 0)) PlayerPrefs.SetFloat("BestTime", timer.time);
 
         PlayerPrefs.Save();

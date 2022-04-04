@@ -195,8 +195,6 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Total wood amount: ...
 
-    Dam size: ...
-
     Survived: ...'
 --- !u!222 &192285305
 CanvasRenderer:
@@ -2592,8 +2590,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Best wood amount: ...
-
-    Biggest dam: ...
 
     Longest survived: ...'
 --- !u!222 &2103005790
